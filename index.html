@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ESLab 1 - NTUEE ESLab Spring 2015</title>
+    <style>
+      html, body {
+        background-color: #FAF9F0;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #4B85D6;
+      }
+      a:visited {
+        color: #4B85D6;
+      }
+      a:hover {
+        color: #81A4F7;
+      }
+      pre {
+        max-width: 800px;
+        margin: 18px auto 64px;
+        padding: 36px;
+        line-height: 1.2em;
+        font-size: 18px;
+        word-break: break-all;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+嵌入式系統實驗 實驗一 參考資源
+==============================
+
+* MDN 的「 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">A re-introduction to JavaScript</a> 」教學文章
+* 免費的線上「 <a href="http://eloquentjavascript.net/">Eloquent JavaScript</a> 」教學電子書
+* 許多人合著的「 <a href="https://bonsaiden.github.io/JavaScript-Garden/">JavaScript Garden</a> 」文件
+* MDN 的詳細的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> 、 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> 、 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> 文件 (查資料可以找它們)
+
+* 03/05 簡述 JavaScript 與留言板範例程式碼的 <a href="https://www.youtube.com/watch?v=0D617NHpEh0">螢幕錄影</a>
+* 03/05 <a href="https://gist.github.com/concise/315e81d18a39b0a7eedc">留言板範例程式碼</a>
+
+* <a href="https://slides.com/concise/js/fullscreen#/">詳細版的 JavaScript 投影片</a>
+* <a href="https://gist.github.com/concise/a20b3e5d7e9c61dfbcc5">挑戰用的 JavaScript 小測驗</a>
+
+* 03/12 結報說明與 NodeJS on Ubuntu 示範 <a href="https://www.youtube.com/watch?v=K-NPdl_gonM">螢幕錄影</a>
+
+* 其他基本知識的螢幕錄影:
+<a href="https://www.youtube.com/watch?v=05PItqfhjsk">0 - Example Working Environment</a>
+<a href="https://www.youtube.com/watch?v=JZU7b-oMVME">1 - Basic Front-End Development Workflow</a>
+<a href="https://www.youtube.com/watch?v=0gNQCIMusxU">2 - Sampe Solution to the JavaScript Quiz</a>
+<a href="https://www.youtube.com/watch?v=5oKdOHyoGU0">3 - HTML &amp; CSS Basics</a>
+<a href="https://www.youtube.com/watch?v=W62DMUt96Ic">4 - How A JavaScript Works In A Web Browser</a>
+<a href="https://www.youtube.com/watch?v=M25IBwF6iAo">5 - JavaScript DOM APIs &amp; Async Events</a>
+<a href="https://www.youtube.com/watch?v=jGFf27ZXre8">6 - Just A Few Words About HTTP</a>
+<a href="https://www.youtube.com/watch?v=1c_Jh5ZQYXk">7 - How to Install Node.js on Ubuntu (12.04 / 14.04)</a>
+<a href="https://www.youtube.com/watch?v=f_JcY8m7N8E">8 - Web Server In Node.js With Static Content</a>  [[<a href="sample-code-8.zip">Sample Code</a>]]
+<a href="https://www.youtube.com/watch?v=iXffs5eaVfQ">9 - Dynamic Web Server In Node.js - Write A Simple Hit Counter</a>
+<a href="https://www.youtube.com/watch?v=vF9uRuFI_mc">10 - Exchanging Data Using AJAX/XMLHttpRequest</a>  [[<a href="sample-code-10.zip">Sample Code</a>]]
+
+(遇到困難時隨時都可以在 FB 社團提出討論)
+
+
+
+
+
+嵌入式系統實驗 實驗一 結果報告需求與繳交之規定
+==============================================
+
+繳交期限：
+
+    03/31 23:59
+
+繳交項目（每組）：
+
+    * 一份報告
+    * 一份程式碼
+
+報告需求：
+
+    * 一份 PDF 檔案，檔名為「 report.pdf 」
+    * 描述在進行這一個實驗時、撰寫程式碼時、學習新知識時
+      遇過的問題，以及你們面對那些困難是怎樣解決的？
+    * 簡單地介紹你們的程式碼提供了哪些功能與使用方法
+    * 篇幅長短沒有任何限制
+    * 排版方式沒有任何限制
+    * 中文或英文皆可
+
+實驗一程式碼需求：
+
+    我們的留言板範例程式碼，已經具有以下功能：
+
+    1. 瀏覽器客戶端可以傳送文字資料給網站伺服器端 (用 HTTP)
+    2. 伺服器可以把過去曾經傳送給它的所有資料都保存下來
+    3. 伺服器可以把資料庫保存的資料，傳送給瀏覽器客戶端
+    4. 使用 JSON 格式交換資料
+
+    請修改範例、或者重寫一個包含上列與下列 1 ~ 8 點功能的應用：
+    (伺服器端只要開在 localhost / 127.0.0.1 可以運作即可)
+
+    5. 每一筆資料除了 data (例如純文字留言) 本身，還額外
+       外包含其他 metadata (例如留言時間、留言者暱稱)
+    6. 伺服器動態地根據情況，選擇部分資料傳送給瀏覽器客戶端，
+       不要每次都直接做 full DB dump。 (例如只回傳最新的 N 筆
+       或者先提供一個 sorting 方式再挑出 top N 等方法...)
+    7. 客戶端顯示資料的資料可以根據 metadata 做排序，例如按個
+       按鈕就可以切換要根據時間還是根據暱稱排序，以顯示留言串
+    8. 可以蒐集「別的型式」的資料 (例如留言板應用中，提供不只是
+       簡單純文字訊息的留言，使用者可能可以從一個已經準備好的
+       collection 選取並傳送其中一個貼圖，甚至使用者能夠自行
+       上傳自己喜歡的圖片檔，而那些貼圖可以顯示在留言板上）
+
+    同學可以發揮創意實作非「留言板」的應用。
+    如果擔心不符合需求，可以事先向助教討論。
+
+    同學可以額外使用 jQuery 、 AngularJS 、 ReactJS 、 Express 等
+    任何協助 JavaScript 開發的函式庫 (library) 或框架 (framework) 。
+
+    9. (Bonus) 實作帳號登入 (密碼認證搭配 cookie 機制) 的功能
+
+實驗一的結果繳交方式：
+
+    * 寄信至 concisense@gmail.com
+    * 每組只需繳交一份，每組也只會有一份成績
+    * 信件主旨必須包含字串「 ESLab1 Submission 」
+    * 信件主旨或內容必須提及組別 (e.g., “Team 13”)
+    * 信件必須恰好有一個附件檔案
+    * 附件檔案名稱格式必須為「 ESLab1_Team??.zip 」
+    * 附件檔案必須為一個合法的 zip 壓縮檔，且直接對它解壓縮後
+      要能得到一個名稱格式為「 ESLab1_Team?? 」的資料夾
+    * 前述資料夾內含了『所有的應繳交項目』（報告與程式碼）
+    * 前述檔案或資料夾名稱中的兩個問號 ?? 表示組別，舉例來說：
+
+          第  6 組同學繳交的「 ESLab1_Team06.zip 」
+          解壓縮後會得到「 ESLab1_Team06 」資料夾。
+
+          第 10 組同學繳交的「 ESLab1_Team10.zip 」
+          解壓縮後會得到「 ESLab1_Team10 」資料夾。
+
+          請以此類推。
+
+    * 重新繳交的檔名例外狀況：
+      當你要重新繳交結果報告時（例如有勘誤或者有想要更新的地方）
+      資料夾名稱格式就會是「 ESLab1_Team??_R* 」
+      壓縮檔名稱格式就會是「 ESLab1_Team??_R*.zip 」
+      其中單一個星號 * 表示修正版本編號，它必須是一個隨時間嚴格
+      遞增的非負整數值。舉例來說：
+
+          假設第 13 組同學已經寄出包含 ESLab1_Team13.zip 的
+          信件但發現程式碼有地方需要修正。他們將資料夾重新命名為
+          ESLab1_Team13_R1 後，壓縮成 ESLab1_Team13_R1.zip
+          再寄出一封郵件，主旨或內容提及組別與更新事宜即可。
+
+          如果隔一陣子過後又有更新，可能就會有 _R2, _R5 甚至到
+          _R9, _R10 等，以此類推。為了避免困擾，請確實把報告整理
+          完成後再繳交。
+
+          我們以最後一個繳交版本的時間與內容為這組的評分依據。
+
+    * 通常在寄出報告後的兩天以內你就會得到回覆，表示已收到。
+      如果沒有收到確認，請再與助教聯繫。
+</pre>
+  </body>
+</html>
